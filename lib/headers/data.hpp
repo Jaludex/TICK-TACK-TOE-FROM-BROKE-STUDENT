@@ -149,6 +149,14 @@ class Gamelog
             case 3:
                 opponent = "CPU (Easy)";
                 P1 = opponent;
+                break;
+            case 4:
+                opponent = "CPU (Hard)";
+                break;
+            case 5:
+                opponent = "CPU (Hard)";
+                P1 = opponent;
+                break;
             default:
                 break;
             }
