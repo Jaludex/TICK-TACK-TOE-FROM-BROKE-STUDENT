@@ -1,0 +1,21 @@
+# Binarios y compilados
+*.exe
+*.out
+*.o
+*.a
+*.so
+*.dll
+
+# Directorios de build
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# Dependencias y generados
+.vscode/
+.idea/
+CMakeCache.txt
+CMakeFiles/
+Makefile
