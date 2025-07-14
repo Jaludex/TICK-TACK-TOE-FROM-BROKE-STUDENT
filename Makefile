@@ -32,7 +32,8 @@ endif
 # =============================================
 APP_NAME := TicTacToe
 APP_VERSION := 1.0
-APP_IMAGE := $(BIN_DIR)/$(APP_NAME)-$(APP_VERSION)-x86_64.AppImage  # Changed to bin directory
+APP_IMAGE := $(BIN_DIR)/$(APP_NAME)-$(APP_VERSION)-x86_64.AppImage
+APPIMAGETOOL := appimagetool-x86_64.AppImage
 
 .PHONY: all clean win linux appimage
 
@@ -70,11 +71,11 @@ $(BIN_DIR):
 # Clean Target (preserves bin directory)
 # =============================================
 clean:
-	@rm -rf $(BUILD_DIR) *.AppImage TicTacToe.AppDir squashfs-root
+	@rm -rf $(BUILD_DIR) TicTacToe.AppDir squashfs-root
 	@echo "Build artifacts cleaned"
 
 # =============================================
-# AppImage Target
+# AppImage Target (uses local appimagetool)
 # =============================================
 appimage: linux
 	@echo "Creating AppDir structure..."
@@ -107,12 +108,17 @@ appimage: linux
 	@echo 'exec "./tictactoe" "$$@"' >> TicTacToe.AppDir/AppRun
 	@chmod +x TicTacToe.AppDir/AppRun
 	
-	@echo "Downloading appimagetool..."
-	@wget -q -nc https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
-	@chmod +x appimagetool-x86_64.AppImage
+	@echo "Checking for appimagetool..."
+	@if [ ! -f "$(APPIMAGETOOL)" ]; then \
+		echo "Downloading appimagetool..."; \
+		wget -q https://github.com/AppImage/AppImageKit/releases/download/continuous/$(APPIMAGETOOL); \
+		chmod +x $(APPIMAGETOOL); \
+	else \
+		echo "Using existing appimagetool"; \
+	fi
 	
 	@echo "Generating AppImage..."
-	@./appimagetool-x86_64.AppImage --appimage-extract >/dev/null
+	@./$(APPIMAGETOOL) --appimage-extract >/dev/null
 	@./squashfs-root/AppRun TicTacToe.AppDir
 	
 	@echo "Moving AppImage to bin directory"
