@@ -16,7 +16,7 @@ Well... You can play Tick Tack Toe. Also, there are modes to play against the cp
 Clone and 'make' on terminal\n
 - "make" and "make linux": Compiles linux executable
 - "make appimage": Compiles whole Appimage for linux
-- "make win": Compiles for linux
+- "make win": Compiles for windows
 - "make clean": Deletes all the files from compiling, except executables (Run it between compilations)
 
 ## Special Thanks to...
