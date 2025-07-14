@@ -18,7 +18,7 @@ int main()
         clearConsole();
 
         std::cout << "Welcome to THE BEST TICK TACK TOE THAT A BROKE STUDENT CAN MAKE" << std::endl << std::endl
-            << "1 - Start Game \n2 - Stadistics \n3 - Credits \n0 - Exit\n\n";
+            << "1 - Start Game \n2 - Stadistics (WIP) \n3 - Credits \n0 - Exit\n\n";
 
         short input = getNumber<short>(3, "Choose an option: ");
 
@@ -37,7 +37,7 @@ int main()
             break;
         case 0:
             clearConsole();
-            std::cout << "Thanks you so much for playing my game.\nTips on: I haven't setted up my paypal yet\n\n";
+            std::cout << "Thanks you so much for playing my game.\nTips on: https://paypal.me/jaludex\n\n";
             std::this_thread::sleep_for(std::chrono::seconds(3));
             clearConsole();
             return 0;
