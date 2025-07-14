@@ -7,8 +7,6 @@
 I wanna do it with AI (Worst case only with random moves), file saved stadistics,
 replays and the best graphics a terminal can give me haha*/
 
-//620 Lines, left to do: Stadistics
-
 int main()
 {
     srand(time(0)); //Seed for random numbers

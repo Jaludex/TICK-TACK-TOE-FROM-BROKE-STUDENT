@@ -1,4 +1,4 @@
-# Binarios y compilados
+# binaries and compiled
 *.exe
 *.out
 *.o
@@ -6,7 +6,7 @@
 *.so
 *.dll
 
-# Directorios de build
+# Build directories
 squashfs-root/
 build/
 bin/
@@ -14,7 +14,7 @@ obj/
 Debug/
 Release/
 
-# Dependencias y generados
+# Dependencies and auto-generated
 .vscode/
 .idea/
 *.AppDir

@@ -108,15 +108,6 @@ appimage: linux
 	@echo 'exec "./tictactoe" "$$@"' >> TicTacToe.AppDir/AppRun
 	@chmod +x TicTacToe.AppDir/AppRun
 	
-	@echo "Checking for appimagetool..."
-	@if [ ! -f "$(APPIMAGETOOL)" ]; then \
-		echo "Downloading appimagetool..."; \
-		wget -q https://github.com/AppImage/AppImageKit/releases/download/continuous/$(APPIMAGETOOL); \
-		chmod +x $(APPIMAGETOOL); \
-	else \
-		echo "Using existing appimagetool"; \
-	fi
-	
 	@echo "Generating AppImage..."
 	@./$(APPIMAGETOOL) --appimage-extract >/dev/null
 	@./squashfs-root/AppRun TicTacToe.AppDir
