@@ -6,15 +6,18 @@ Well... You can play Tick Tack Toe. Also, there are modes to play against the cp
 
 ## Running
 - Windows: Just download the .exe file in the latest release
-- Linux: Download the latest linux release, go to the folder where it downloaded\
-      In terminal: "chmod +x TTT*"\
-      Then run: "./TTT*"\
-  Im learning AppImage to make other projects, but this is enought here i think. Anyways when i managed to make it work, im gonna add an AppImage to the release
+- Linux: Download the latest .appimage release (Recommended over pure linux release) and go to that folder\
+         Try and run it with: "./TicTacToe*"\,
+         If it can't find FUSE, check [here](https://github.com/AppImage/AppImageKit/wiki/FUSE#install-fuse)
 
   
 
 ## Compiling
-Clone and 'make' on terminal, that should work on any system i think.
+Clone and 'make' on terminal\n
+- "make" and "make linux": Compiles linux executable
+- "make appimage": Compiles whole Appimage for linux
+- "make win": Compiles for linux
+- "make clean": Deletes all the files from compiling, except executables (Run it between compilations)
 
 ## Special Thanks to...
 My mom, who told me this is the best game ever :D
