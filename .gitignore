@@ -5,8 +5,10 @@
 *.a
 *.so
 *.dll
+*.AppImage
 
 # Directorios de build
+squashfs-root/
 build/
 bin/
 obj/
@@ -16,3 +18,4 @@ Release/
 # Dependencias y generados
 .vscode/
 .idea/
+*.AppDir
