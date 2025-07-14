@@ -18,7 +18,7 @@ int main()
         clearConsole();
 
         std::cout << "Welcome to THE BEST TICK TACK TOE THAT A BROKE STUDENT CAN MAKE" << std::endl << std::endl
-            << "1 - Start Game \n2 - Stadistics \n3 - Credits \n0 - Exit\nf\n";
+            << "1 - Start Game \n2 - Stadistics \n3 - Credits \n0 - Exit\n\n";
 
         short input = getNumber<short>(3, "Choose an option: ");
 
