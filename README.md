@@ -20,4 +20,4 @@ Clone and 'make' on terminal\n
 - "make clean": Deletes all the files from compiling, except executables (Run it between compilations)
 
 ## Special Thanks to...
-My mom, who told me this is the best game ever :D
+My mom and my girlfriend, who told me this is the best game ever :D
